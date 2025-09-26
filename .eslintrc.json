@@ -116,13 +116,6 @@
         "@typescript-eslint/no-extra-semi": "off",
         "no-extra-semi": "error"
       }
-    },
-    {
-      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
-      "env": {
-        "jest": true
-      },
-      "rules": {}
     }
   ]
 }

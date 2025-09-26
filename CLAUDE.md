@@ -28,8 +28,8 @@ Since this uses Nx, use the Nx MCP Server for all operations:
 ### Development
 - `nx serve <app-name>` - Start development server for an application
 - `nx build <app-name>` - Build an application for production
-- `nx test <app-name>` - Run unit tests for a project
-- `nx e2e <app-name>` - Run end-to-end tests
+- `nx test <app-name>` - Run Cucumber tests for a project (no Jest/Playwright)
+- `nx e2e <app-name>` - Run Cucumber end-to-end tests
 
 ### Code Generation
 - `nx g @nx/angular:app <app-name>` - Generate Angular application
@@ -40,7 +40,7 @@ Since this uses Nx, use the Nx MCP Server for all operations:
 ### Workspace Operations
 - `nx graph` - View project dependency graph
 - `nx affected:build` - Build only affected projects
-- `nx affected:test` - Test only affected projects
+- `nx affected:test` - Run Cucumber tests only for affected projects
 - `nx format:check` - Check code formatting
 - `nx format:write` - Format code
 

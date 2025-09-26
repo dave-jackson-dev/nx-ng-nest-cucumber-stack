@@ -30,8 +30,7 @@ All commands should be run through the Nx system:
 
 ```bash
 nx serve shell        # Start the shell application
-nx test shell        # Run unit tests
-nx e2e shell-e2e    # Run E2E tests
+nx test <project>    # Run Cucumber tests
 nx affected:*       # Run commands only on affected projects
 ```
 
@@ -48,14 +47,16 @@ nx affected:*       # Run commands only on affected projects
 
 ## Testing Strategy
 
-1. **Unit Tests**
-   - Jest-based testing configured in `jest.config.ts`
-   - Follow patterns in existing tests
+1. **Cucumber Testing**
+   - Behavior-driven development (BDD) with Cucumber
+   - Feature files describe user scenarios in Gherkin syntax
+   - Step definitions implement test logic
+   - No Jest or Playwright - pure Cucumber approach
 
-2. **E2E Tests**
-   - Cucumber features in `tests/<app>-e2e/src/`
-   - Playwright for browser automation
-   - Example spec: `tests/shell-e2e/src/example.spec.ts`
+2. **Test Organization**
+   - Feature files in `tests/<project>/features/`
+   - Step definitions in `tests/<project>/step-definitions/`
+   - Follow BDD best practices for scenario writing
 
 ## Important Conventions
 
@@ -84,6 +85,6 @@ nx affected:*       # Run commands only on affected projects
 - `nx.json` - Workspace configuration
 - `apps/shell/project.json` - Shell app configuration
 - `apps/shell/module-federation.config.ts` - Microfrontend setup
-- `jest.config.ts` - Test configuration
+- `cucumber.config.js` - Test configuration (when added)
 
 Need help? Check the documentation in `/docs` or use `nx graph` to visualize project dependencies.
