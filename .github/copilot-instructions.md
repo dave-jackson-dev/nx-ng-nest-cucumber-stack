@@ -14,8 +14,8 @@ This is an Nx monorepo template implementing a Domain-Driven Design (DDD) microf
 ### Key Structural Patterns
 
 1. **Microfrontend Shell Architecture**
-   - Main shell application in `apps/shell/` orchestrates other microfrontends
-   - Module Federation config in `apps/shell/module-federation.config.ts` defines remote loading
+   - Main shell application in `apps/micro-clients/shell/` orchestrates other microfrontends
+   - Module Federation config in `apps/micro-clients/shell/module-federation.config.ts` defines remote loading
    - Shared dependencies managed through webpack configuration
 
 2. **Project Organization**
@@ -37,8 +37,8 @@ nx affected:*       # Run commands only on affected projects
 ### Key Integration Points
 
 1. **Module Federation**
-   - Remote apps must be registered in `apps/shell/module-federation.config.ts`
-   - Shared dependencies configured in `apps/shell/webpack.config.ts`
+   - Remote apps must be registered in `apps/micro-clients/shell/module-federation.config.ts`
+   - Shared dependencies configured in `apps/micro-clients/shell/webpack.config.ts`
 
 2. **DDD Boundaries**
    - Each domain has its own library in `libs/`
@@ -83,8 +83,8 @@ nx affected:*       # Run commands only on affected projects
 
 ## Useful Files
 - `nx.json` - Workspace configuration
-- `apps/shell/project.json` - Shell app configuration
-- `apps/shell/module-federation.config.ts` - Microfrontend setup
+- `apps/micro-clients/shell/project.json` - Shell app configuration
+- `apps/micro-clients/shell/module-federation.config.ts` - Microfrontend setup
 - `cucumber.config.js` - Test configuration (when added)
 
 Need help? Check the documentation in `/docs` or use `nx graph` to visualize project dependencies.

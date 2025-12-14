@@ -65,22 +65,22 @@
       "e2eTestRunner": "cypress",
       "linter": "eslint",
       "style": "scss",
-"unitTestRunner": "none"
+      "unitTestRunner": "none"
     },
     "@nx/angular:library": {
       "linter": "eslint",
-"unitTestRunner": "none"
+      "unitTestRunner": "none"
     },
     "@nx/angular:component": {
       "style": "scss"
     },
     "@nx/nest:application": {
       "linter": "eslint",
-"unitTestRunner": "none"
+      "unitTestRunner": "none"
     },
     "@nx/nest:library": {
       "linter": "eslint",
-"unitTestRunner": "none"
+      "unitTestRunner": "none"
     }
   },
   "useInferencePlugins": false

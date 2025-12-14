@@ -1,29 +1,29 @@
 {
   "name": "shell",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/shell/src",
+  "sourceRoot": "apps/micro-clients/shell/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/shell",
-        "index": "apps/shell/src/index.html",
-        "main": "apps/shell/src/main.ts",
+        "outputPath": "dist/apps/micro-clients/shell",
+        "index": "apps/micro-clients/shell/src/index.html",
+        "main": "apps/micro-clients/shell/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/shell/tsconfig.app.json",
+        "tsConfig": "apps/micro-clients/shell/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/shell/public"
+            "input": "apps/micro-clients/shell/public"
           }
         ],
-        "styles": ["apps/shell/src/styles.css"],
+        "styles": ["apps/micro-clients/shell/src/styles.css"],
         "customWebpackConfig": {
-          "path": "apps/shell/webpack.config.ts"
+          "path": "apps/micro-clients/shell/webpack.config.ts"
         }
       },
       "configurations": {
