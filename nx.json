@@ -83,5 +83,6 @@
       "unitTestRunner": "none"
     }
   },
-  "useInferencePlugins": false
+  "useInferencePlugins": false,
+  "nxCloudId": "693fe04c6e1b8e67df83583b"
 }
