@@ -126,7 +126,7 @@
     "tslib": "^2.3.0",
     "typeorm": "^0.3.17",
     "uuid": "^9.0.0",
-    "zone.js": "~0.14.3"
+    "zone.js": "~0.15.0"
   },
   "nx": {
     "includedScripts": []
