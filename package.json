@@ -72,8 +72,8 @@
     "@types/node": "~18.16.9",
     "@types/passport-jwt": "^4.0.1",
     "@types/passport-local": "^1.0.35",
-    "@typescript-eslint/eslint-plugin": "^7.16.0",
-    "@typescript-eslint/parser": "^7.16.0",
+    "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
     "@typescript-eslint/utils": "^8.40.0",
     "angular-eslint": "^18.3.0",
     "cypress": "^13.13.0",
@@ -131,15 +131,9 @@
   "nx": {
     "includedScripts": []
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,ts,json,md}": [
-      "nx format:write --uncommitted",
-      "git add"
+      "nx format:write --uncommitted"
     ]
   }
 }

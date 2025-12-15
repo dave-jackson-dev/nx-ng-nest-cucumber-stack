@@ -29,8 +29,8 @@ Since this uses Nx, use the Nx MCP Server for all operations:
 
 - `nx serve <app-name>` - Start development server for an application
 - `nx build <app-name>` - Build an application for production
-- `nx test <app-name>` - Run Cucumber tests for a project (no Jest/Playwright)
-- `nx e2e <app-name>` - Run Cucumber end-to-end tests
+- `nx test <app-name>` - TODO: Run Cucumber tests for a project (no Jest/Playwright)
+- `nx e2e <app-name>` - TODO: Run Cucumber end-to-end tests
 
 ### Code Generation
 
@@ -43,7 +43,7 @@ Since this uses Nx, use the Nx MCP Server for all operations:
 
 - `nx graph` - View project dependency graph
 - `nx affected:build` - Build only affected projects
-- `nx affected:test` - Run Cucumber tests only for affected projects
+- `nx affected:test` - TODO: Run Cucumber tests only for affected projects
 - `nx format:check` - Check code formatting
 - `nx format:write` - Format code
 

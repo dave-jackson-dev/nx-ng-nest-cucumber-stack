@@ -28,7 +28,7 @@ This is an Nx monorepo template for full-stack applications using Angular, NestJ
 ```
 
 ## Testing
-This template uses Cucumber for behavior-driven development (BDD) testing:
+This template will use Cucumber for behavior-driven development (BDD) testing:
 - **Unit Tests**: Domain logic testing with Cucumber scenarios
 - **Integration Tests**: Service interaction testing
 - **E2E Tests**: End-to-end user workflow testing

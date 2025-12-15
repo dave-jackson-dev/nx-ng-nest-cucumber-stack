@@ -8,6 +8,6 @@ fetch('/module-federation.manifest.json')
     )
   )
   .then(remotes => registerRemotes(remotes))
-  .then(() => import('./bootstrap')
-  .catch(err => console.error(err))
+  .then(() => import('./bootstrap'))
+  .catch(err => console.error(err)
 );

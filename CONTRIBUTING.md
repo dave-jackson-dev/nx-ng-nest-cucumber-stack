@@ -15,7 +15,7 @@ Thank you for considering contributing to this project! This document outlines t
 - Follow DDD architecture principles
 - Respect ESLint boundary rules
 
-## Testing Requirements
+## Testing Requirements (TODO)
 - Write Cucumber scenarios for new features
 - Ensure all tests pass before submitting PRs
 - Use behavior-driven development (BDD) approach
