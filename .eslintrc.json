@@ -1,0 +1,121 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nx", "boundaries"],
+  "settings": {
+    "boundaries/elements": [
+      {
+        "type": "domain",
+        "pattern": "libs/domain/*"
+      },
+      {
+        "type": "application",
+        "pattern": "libs/application/*"
+      },
+      {
+        "type": "infrastructure",
+        "pattern": "libs/infrastructure/*"
+      },
+      {
+        "type": "presentation",
+        "pattern": "libs/presentation/*"
+      },
+      {
+        "type": "shared",
+        "pattern": "libs/shared/*"
+      },
+      {
+        "type": "app",
+        "pattern": "apps/*"
+      }
+    ],
+    "boundaries/dependency-rules": [
+      {
+        "from": "domain",
+        "disallow": ["application", "infrastructure", "presentation", "app"],
+        "message": "Domain layer should not depend on other layers"
+      },
+      {
+        "from": "application",
+        "allow": ["domain", "shared"],
+        "disallow": ["infrastructure", "presentation", "app"],
+        "message": "Application layer should only depend on domain and shared layers"
+      },
+      {
+        "from": "infrastructure",
+        "allow": ["domain", "application", "shared"],
+        "disallow": ["presentation", "app"],
+        "message": "Infrastructure layer should not depend on presentation or app layers"
+      },
+      {
+        "from": "presentation",
+        "allow": ["domain", "application", "shared"],
+        "disallow": ["infrastructure"],
+        "message": "Presentation layer should not depend on infrastructure layer directly"
+      },
+      {
+        "from": "app",
+        "allow": ["domain", "application", "infrastructure", "presentation", "shared"],
+        "message": "Apps can depend on any layer"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "type:domain",
+                "onlyDependOnLibsWithTags": ["type:shared"]
+              },
+              {
+                "sourceTag": "type:application",
+                "onlyDependOnLibsWithTags": ["type:domain", "type:shared"]
+              },
+              {
+                "sourceTag": "type:infrastructure",
+                "onlyDependOnLibsWithTags": ["type:domain", "type:application", "type:shared"]
+              },
+              {
+                "sourceTag": "type:presentation",
+                "onlyDependOnLibsWithTags": ["type:domain", "type:application", "type:shared"]
+              },
+              {
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ],
+        "boundaries/element-types": [
+          "error",
+          {
+            "default": "disallow"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nx/typescript"],
+      "rules": {
+        "@typescript-eslint/no-extra-semi": "error",
+        "no-extra-semi": "off"
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nx/javascript"],
+      "rules": {
+        "@typescript-eslint/no-extra-semi": "off",
+        "no-extra-semi": "error"
+      }
+    }
+  ]
+}
