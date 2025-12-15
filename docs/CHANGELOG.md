@@ -27,31 +27,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated `@angular/platform-browser-dynamic` from ^18.2.0 to ^19.2.17
 - Updated `@angular/router` from ^18.2.0 to ^19.2.17
 
-**Angular CLI & Build Tools (18.2.x → 19.2.17)**
-- Updated `@angular/cli` from ^18.2.12 to ^19.2.17
+**Angular CLI & Build Tools (18.2.x → 19.2.x)**
+- Updated `@angular/cli` from ^18.2.12 to ^19.2.19
 - Updated `@angular/compiler-cli` from ^18.2.0 to ^19.2.17
 - Updated `@angular/language-service` from ^18.2.0 to ^19.2.17
-- Updated `@angular-devkit/build-angular` from ^18.2.12 to ^19.2.17
-- Updated `@angular/build` from ^18.2.12 to ^19.2.17
+- Updated `@angular-devkit/build-angular` from ^18.2.12 to ^19.2.19
+- Updated `@angular/build` from ^18.2.12 to ^19.2.19
 
-**NestJS Framework (10.x → 11.1.9)**
+**NestJS Framework (10.x → 11.x)**
 - Updated `@nestjs/common` from ^10.0.0 to ^11.1.9
 - Updated `@nestjs/core` from ^10.0.0 to ^11.1.9
 - Updated `@nestjs/platform-express` from ^10.0.0 to ^11.1.9
 - Updated `@nestjs/microservices` from ^10.0.0 to ^11.1.9
-- Updated `@nestjs/config` from ^3.0.0 to ^4.0.0
-- Updated `@nestjs/jwt` from ^10.1.0 to ^11.0.0
-- Updated `@nestjs/passport` from ^10.0.0 to ^11.0.0
+- Updated `@nestjs/config` from ^3.0.0 to ^4.0.2
+- Updated `@nestjs/jwt` from ^10.1.0 to ^11.0.2
+- Updated `@nestjs/passport` from ^10.0.0 to ^11.0.5
 - Updated `@nestjs/swagger` from ^7.1.2 to ^11.2.3 (fixes js-yaml vulnerability)
 - Updated `@nestjs/typeorm` from ^10.0.0 to ^11.0.0
-- Updated `@nestjs/schematics` from ^11.0.0 to ^11.0.0
-- Updated `@nestjs/testing` from ^10.0.0 to ^11.0.0
+- Updated `@nestjs/schematics` from ^11.0.0 to ^11.0.9
 
 **NgRx State Management (18.x → 19.x)**
-- Updated `@ngrx/store` from ^18.0.0 to ^19.0.0
-- Updated `@ngrx/effects` from ^18.0.0 to ^19.0.0
-- Updated `@ngrx/entity` from ^18.0.0 to ^19.0.0
-- Updated `@ngrx/store-devtools` from ^18.0.0 to ^19.0.0
+- Updated `@ngrx/store` from ^18.0.0 to ^19.2.1
+- Updated `@ngrx/effects` from ^18.0.0 to ^19.2.1
+- Updated `@ngrx/entity` from ^18.0.0 to ^19.2.1
+- Updated `@ngrx/store-devtools` from ^18.0.0 to ^19.2.1
 
 #### Security Audit Results
 - **Before:** 21 vulnerabilities (10 high, 5 moderate, 6 low)
@@ -83,7 +82,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Module Federation configuration
 - NestJS microservices foundation
 - Domain-Driven Design (DDD) structure
-- Cucumber testing framework setup
 - ESLint and Prettier configuration
 - TypeScript configuration
 - Git hooks with Husky and lint-staged

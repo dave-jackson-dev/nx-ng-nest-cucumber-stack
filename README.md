@@ -1,12 +1,11 @@
 # Nx Angular + NestJS + Cucumber Template
 
-This is an Nx monorepo template for full-stack applications using Angular, NestJS, and Cucumber testing. It implements Domain-Driven Design (DDD) principles and Module Federation for micro-frontends.
+This is an Nx monorepo template for full-stack applications using Angular and NestJS. It implements Domain-Driven Design (DDD) principles and Module Federation for micro-frontends.
 
 ## Features
 - **Nx Monorepo**: Efficient workspace management with caching and task orchestration
-- **Angular 18**: Modern frontend with Module Federation support
-- **NestJS 10**: Scalable Node.js backend framework
-- **Cucumber Testing**: BDD-style testing framework (no Jest/Playwright)
+- **Angular 19**: Modern frontend with Module Federation support
+- **NestJS 11**: Scalable Node.js backend framework
 - **DDD Architecture**: Domain-driven design with ESLint boundary enforcement
 - **Module Federation**: Micro-frontend architecture support
 - **TypeScript**: Full type safety across the stack
